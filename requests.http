@@ -1,0 +1,30 @@
+@host = http://localhost:5000
+
+GET {{host}}/api/health
+
+###
+GET {{host}}/api/books
+
+###
+GET {{host}}/api/readers
+
+###
+POST {{host}}/api/books
+Content-Type: application/json
+
+{
+  "title": "Docker for Beginners",
+  "author": "Exam Student",
+  "year": 2024,
+  "isAvailable": true
+}
+
+###
+POST {{host}}/api/readers
+Content-Type: application/json
+
+{
+  "fullName": "Test Student",
+  "groupName": "IS-23",
+  "email": "student@example.com"
+}
